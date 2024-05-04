@@ -1,0 +1,21 @@
+.block {
+    display: inline-block;
+    width: 100px;
+}
+
+.align {
+    align-self: center;
+}
+
+.mid {
+    height: 100px;
+}
+
+.midInner {
+    padding-top: 45px;
+    padding-left: 100px;
+}
+
+.space {
+    width: 100px;
+}

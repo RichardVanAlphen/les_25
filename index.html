@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Clicker Game</title>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+  </head>
+  <body>
+    <div id="mainContent">
+        <div>
+            <div class="col-4 block align">
+                <button class="btnKnop" id="btnKnop1">Click me</button>
+            </div>
+            <div class="col-4 block space"> </div>
+            <div class="col-4 block align">
+                <button class="btnKnop" id="btnKnop2">Click me</button>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="midInner" id="divResult"></div>
+        </div>
+        <div>
+            <div class="col-4 block align">
+                <button class="btnKnop" id="btnKnop3">Click me</button>
+            </div>
+            <div class="col-4 block space"></div>
+            <div class="col-4 block align">
+                <button class="btnKnop" id="btnKnop4">Click me</button>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script>
+    let teller = 0;
+    $(document).ready(function(){
+        $('body').on('click', '.btnKnop', function() {
+            $('#divResult').text(++teller + ' keer geklikt');
+            $('.btnKnop').hide();
+        });
+    
+
+        setInterval(function() {
+            let nummer = 1 + Math.floor(Math.random() * 4);
+            let knopShow = '#btnKnop' + nummer;
+            $(knopShow).show();
+        },
+        1000);
+    });
+  </script>
+</html>
